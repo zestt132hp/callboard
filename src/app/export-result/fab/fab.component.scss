@@ -1,0 +1,99 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.root_styleTertiary {
+  background: #ffd8e4;
+}
+
+.root_styleSecondary {
+  background: #e8def8;
+}
+
+.root_stylePrimary {
+  background: #eaddff;
+}
+
+.root_styleSurface {
+  background: #ece6f0;
+}
+.stateLayer {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+}
+
+.stateLayer_styleTertiaryStatePressedStateHovered {
+  background: #633b4814;
+}
+
+.stateLayer_styleTertiaryStateFocused {
+  background: #633b481e;
+}
+
+.stateLayer_styleSecondaryStatePressedStateHovered {
+  background: #4a445914;
+}
+
+.stateLayer_styleSecondaryStateFocused {
+  background: #4a44591e;
+}
+
+.stateLayer_stylePrimaryStatePressedStateHovered {
+  background: #4f378a14;
+}
+
+.stateLayer_stylePrimaryStateFocused {
+  background: #4f378a1e;
+}
+
+.stateLayer_styleSurfaceStatePressedStateHovered {
+  background: #65558f14;
+}
+
+.stateLayer_styleSurfaceStateFocused {
+  background: #65558f1e;
+}
+.edit {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.stateLayer {
+  top: 21px;
+  left: 6px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.stateLayer_styleTertiaryStatePressed {
+  display: flex;
+}
+
+.stateLayer_styleSecondaryStatePressed {
+  display: flex;
+}
+
+.stateLayer_stylePrimaryStatePressed {
+  display: flex;
+}
+
+.stateLayer_styleSurfaceStatePressed {
+  display: flex;
+}

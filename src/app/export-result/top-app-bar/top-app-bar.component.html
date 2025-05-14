@@ -1,0 +1,101 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_configurationSmallCenteredConfigurationSmall:
+      configuration === 'Small centered' || configuration === 'Small',
+    root_configurationMediumConfigurationLarge:
+      configuration === 'Medium' || configuration === 'Large',
+    root_elevationFlat: elevation === 'flat',
+    root_elevationOnScroll: elevation === 'on-scroll',
+    root_configurationMedium: configuration === 'Medium',
+    root_configurationLarge: configuration === 'Large',
+  }"
+>
+  <div
+    *ngIf="configuration === 'Small centered' || configuration === 'Small'"
+    class="leadingIcon"
+  >
+    <div class="container">
+      <div class="stateLayer">
+        <ng-content></ng-content>
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  <span
+    *ngIf="configuration === 'Small centered' || configuration === 'Small'"
+    class="headline headline_1 headline_2"
+    >{{ headline }}</span
+  >
+  <div class="trailingIcon">
+    <div class="container">
+      <div class="stateLayer">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  <div class="trailingIcon">
+    <div class="trailingIcon1">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <div class="trailingIcon2">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <div class="trailingIcon3">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="configuration === 'Medium' || configuration === 'Large'"
+    class="leadingTrailingIcons"
+  >
+    <div class="leadingIcon">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <div class="trailingIcon">
+      <div class="trailingIcon1">
+        <div class="container">
+          <div class="stateLayer">
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </div>
+      <div class="trailingIcon2">
+        <div class="container">
+          <div class="stateLayer">
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </div>
+      <div class="trailingIcon3">
+        <div class="container">
+          <div class="stateLayer">
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="configuration === 'Medium' || configuration === 'Large'"
+    class="headline"
+  >
+    <span class="headline">{{ headline }}</span>
+  </div>
+</div>

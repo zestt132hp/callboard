@@ -1,0 +1,473 @@
+.root {
+  box-sizing: border-box;
+}
+
+.root_configurationSmallCenteredConfigurationSmall {
+  padding: 8px 4px 8px 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 64px;
+}
+
+.root_configurationMediumConfigurationLarge {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.root_elevationFlat {
+  background: #fef7ff;
+}
+
+.root_elevationOnScroll {
+  background: #f3edf7;
+}
+
+.root_configurationMedium {
+  padding-bottom: 24px;
+}
+
+.root_configurationLarge {
+  padding-bottom: 28px;
+}
+.leadingIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.menu {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.arrowBack {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.headline {
+  display: flex;
+  box-sizing: content-box;
+  color: #000000;
+  font-weight: 400;
+  text-wrap: wrap;
+  width: -webkit-fill-available;
+}
+
+.headline_1 {
+  text-align: center;
+}
+
+.headline_2 {
+  text-align: left;
+}
+
+.trailingIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.accountCircle {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.trailingIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.trailingIcon1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.attachFile {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.trailingIcon2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.today {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.trailingIcon3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.moreVert {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.leadingTrailingIcons {
+  padding: 8px 4px 0px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 212px;
+  box-sizing: border-box;
+  width: -webkit-fill-available;
+}
+.leadingIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.arrowBack {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.trailingIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.trailingIcon1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.attachFile {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.trailingIcon2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.today {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.trailingIcon3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.stateLayer {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.moreVert {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.headline {
+  padding: 0px 16px 0px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 10px;
+  box-sizing: border-box;
+  width: -webkit-fill-available;
+}
+.headline {
+  display: flex;
+  box-sizing: content-box;
+  color: #000000;
+  font-family: Roboto;
+  letter-spacing: 0px;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: left;
+  text-wrap: nowrap;
+}

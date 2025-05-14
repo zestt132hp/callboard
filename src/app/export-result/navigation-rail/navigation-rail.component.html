@@ -1,0 +1,75 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_alignmentTopAlignmentBottom:
+      alignment === 'Top' || alignment === 'Bottom',
+    root_alignmentMiddle: alignment === 'Middle',
+    root_alignmentTopAlignmentMiddle:
+      alignment === 'Top' || alignment === 'Middle',
+    root_alignmentBottom: alignment === 'Bottom',
+  }"
+>
+  <div class="menuFab">
+    <div class="menu">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+    <div class="fabElevationOverride">
+      <div class="fab">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="destinations"
+    [ngClass]="{
+      destinations_alignmentTopAlignmentBottom:
+        alignment === 'Top' || alignment === 'Bottom',
+      destinations_alignmentMiddle: alignment === 'Middle',
+    }"
+  >
+    <div class="navItem1">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+      <span class="label">{{ labelText }}</span>
+    </div>
+    <div class="navItem2">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+      <span class="label">{{ labelText }}</span>
+    </div>
+    <div class="navItem3">
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+      <span class="label">{{ labelText }}</span>
+    </div>
+    <div
+      class="navItem4"
+      [ngClass]="{
+        navItem4_alignmentMiddleAlignmentBottom:
+          alignment === 'Middle' || alignment === 'Bottom',
+      }"
+    >
+      <div class="container">
+        <div class="stateLayer">
+          <ng-content></ng-content>
+        </div>
+      </div>
+      <span class="label">{{ labelText }}</span>
+    </div>
+  </div>
+</div>

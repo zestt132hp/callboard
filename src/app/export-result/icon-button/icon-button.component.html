@@ -1,0 +1,64 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_styleFilledStateEnabled: style === 'Filled' && state === 'Enabled',
+    root_styleOutlinedStateDisabledStyleOutlinedStateEnabledStyleTonalStateDisabledStyleFilledStateDisabled:
+      (style === 'Outlined' && state === 'Disabled') ||
+      (style === 'Outlined' && state === 'Enabled') ||
+      (style === 'Tonal' && state === 'Disabled') ||
+      (style === 'Filled' && state === 'Disabled'),
+  }"
+>
+  <div
+    class="container"
+    [ngClass]="{
+      container_stateDisabledStyleTonalStyleFilled:
+        state === 'Disabled' && (style === 'Tonal' || style === 'Filled'),
+      container_styleTonalStatePressedStateFocusedStateHoveredStateEnabled:
+        style === 'Tonal' &&
+        (state === 'Pressed' ||
+          state === 'Focused' ||
+          state === 'Hovered' ||
+          state === 'Enabled'),
+      container_styleFilledStatePressedStateFocusedStateHoveredStateEnabled:
+        style === 'Filled' &&
+        (state === 'Pressed' ||
+          state === 'Focused' ||
+          state === 'Hovered' ||
+          state === 'Enabled'),
+      container_styleOutlinedStateDisabled:
+        style === 'Outlined' && state === 'Disabled',
+      container_styleOutlinedStatePressedStateFocusedStateHoveredStateEnabled:
+        style === 'Outlined' &&
+        (state === 'Pressed' ||
+          state === 'Focused' ||
+          state === 'Hovered' ||
+          state === 'Enabled'),
+    }"
+  >
+    <div
+      class="stateLayer"
+      [ngClass]="{
+        stateLayer_styleOutlinedStatePressedStyleOutlinedStateFocusedStyleStandardStatePressedStyleStandardStateFocused:
+          (style === 'Outlined' && state === 'Pressed') ||
+          (style === 'Outlined' && state === 'Focused') ||
+          (style === 'Standard' && state === 'Pressed') ||
+          (style === 'Standard' && state === 'Focused'),
+        stateLayer_stateHoveredStyleOutlinedStyleStandard:
+          state === 'Hovered' && (style === 'Outlined' || style === 'Standard'),
+        stateLayer_styleTonalStatePressedStateFocused:
+          style === 'Tonal' && (state === 'Pressed' || state === 'Focused'),
+        stateLayer_styleTonalStateHovered:
+          style === 'Tonal' && state === 'Hovered',
+        stateLayer_styleFilledStatePressedStateFocused:
+          style === 'Filled' && (state === 'Pressed' || state === 'Focused'),
+        stateLayer_styleFilledStateHovered:
+          style === 'Filled' && state === 'Hovered',
+        stateLayer_styleStandardStateEnabled:
+          style === 'Standard' && state === 'Enabled',
+      }"
+    >
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

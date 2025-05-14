@@ -1,0 +1,61 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_styleTertiary: style === 'Tertiary',
+    root_styleSecondary: style === 'Secondary',
+    root_stylePrimary: style === 'Primary',
+    root_styleSurface: style === 'Surface',
+  }"
+>
+  <div
+    class="stateLayer"
+    [ngClass]="{
+      stateLayer_styleTertiaryStatePressedStateHovered:
+        style === 'Tertiary' && (state === 'Pressed' || state === 'Hovered'),
+      stateLayer_styleTertiaryStateFocused:
+        style === 'Tertiary' && state === 'Focused',
+      stateLayer_styleSecondaryStatePressedStateHovered:
+        style === 'Secondary' && (state === 'Pressed' || state === 'Hovered'),
+      stateLayer_styleSecondaryStateFocused:
+        style === 'Secondary' && state === 'Focused',
+      stateLayer_stylePrimaryStatePressedStateHovered:
+        style === 'Primary' && (state === 'Pressed' || state === 'Hovered'),
+      stateLayer_stylePrimaryStateFocused:
+        style === 'Primary' && state === 'Focused',
+      stateLayer_styleSurfaceStatePressedStateHovered:
+        style === 'Surface' && (state === 'Pressed' || state === 'Hovered'),
+      stateLayer_styleSurfaceStateFocused:
+        style === 'Surface' && state === 'Focused',
+    }"
+  >
+    <ng-content></ng-content>
+    <div
+      *ngIf="state === 'Pressed'"
+      class="stateLayer"
+      [ngClass]="{
+        stateLayer_styleTertiaryStatePressed:
+          style === 'Tertiary' && state === 'Pressed',
+        stateLayer_styleSecondaryStatePressed:
+          style === 'Secondary' && state === 'Pressed',
+        stateLayer_stylePrimaryStatePressed:
+          style === 'Primary' && state === 'Pressed',
+        stateLayer_styleSurfaceStatePressed:
+          style === 'Surface' && state === 'Pressed',
+      }"
+    >
+      <svg
+        width="50"
+        height="35"
+        viewBox="0 0 50 35"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M50 4.515V30.625C50 33.0412 48.3314 35 46.2732 35H0C2.27429 15.2362 16.702 0 34.161 0C39.8713 0 45.2574 1.62989 50 4.515Z"
+          fill="#633B48"
+          fill-opacity="0.12"
+        />
+      </svg>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_stateDisabledSelectedFalseStateEnabled:
+      (state === 'Disabled' && selected === 'False') || state === 'Enabled',
+    root_statePressedStateFocusedStateHovered:
+      state === 'Pressed' || state === 'Focused' || state === 'Hovered',
+  }"
+>
+  <div
+    class="container"
+    [ngClass]="{
+      container_selectedTrueStatePressedStateFocusedStateHoveredStateEnabled:
+        selected === 'True' &&
+        (state === 'Pressed' ||
+          state === 'Focused' ||
+          state === 'Hovered' ||
+          state === 'Enabled'),
+      container_configurationIconOnlySelectedFalseStateDisabledStateEnabled:
+        configuration === 'Icon only' &&
+        selected === 'False' &&
+        (state === 'Disabled' || state === 'Enabled'),
+      container_selectedFalseStatePressedStateFocusedStateHoveredConfigurationLabelOnlyConfigurationLabelIconSelectedTrueStateEnabled:
+        selected === 'False' ||
+        state === 'Pressed' ||
+        state === 'Focused' ||
+        state === 'Hovered' ||
+        configuration === 'Label only' ||
+        configuration === 'Label & icon' ||
+        selected === 'True' ||
+        state === 'Enabled',
+      container_stateDisabledSelectedFalse:
+        state === 'Disabled' && selected === 'False',
+      container_statePressedStateFocusedStateHoveredStateEnabled:
+        state === 'Pressed' ||
+        state === 'Focused' ||
+        state === 'Hovered' ||
+        state === 'Enabled',
+    }"
+  >
+    <div
+      class="stateLayer"
+      [ngClass]="{
+        stateLayer_statePressedStateFocusedStateHovered:
+          state === 'Pressed' || state === 'Focused' || state === 'Hovered',
+        stateLayer_selectedFalseStatePressedStateFocused:
+          selected === 'False' && (state === 'Pressed' || state === 'Focused'),
+        stateLayer_selectedTrueStatePressedStateFocused:
+          selected === 'True' && (state === 'Pressed' || state === 'Focused'),
+        stateLayer_stateHoveredSelectedFalse:
+          state === 'Hovered' && selected === 'False',
+        stateLayer_stateHoveredSelectedTrue:
+          state === 'Hovered' && selected === 'True',
+      }"
+    >
+      <ng-content></ng-content>
+      <span
+        *ngIf="
+          selected === 'False' ||
+          configuration === 'Label only' ||
+          configuration === 'Label & icon' ||
+          state === 'Pressed' ||
+          state === 'Focused' ||
+          state === 'Hovered' ||
+          state === 'Enabled'
+        "
+        class="labelText"
+        [ngClass]="{
+          labelText_selectedFalseConfigurationLabelOnlyConfigurationLabelIcon:
+            selected === 'False' &&
+            (configuration === 'Label only' ||
+              configuration === 'Label & icon'),
+          labelText_selectedTrueConfigurationLabelIconStatePressedConfigurationLabelOnlyStatePressedConfigurationLabelIconStateFocusedConfigurationLabelOnlyStateFocusedConfigurationLabelIconStateHoveredConfigurationLabelOnlyStateHoveredConfigurationLabelIconStateEnabledConfigurationLabelOnlyStateEnabled:
+            selected === 'True' &&
+            ((configuration === 'Label & icon' && state === 'Pressed') ||
+              (configuration === 'Label only' && state === 'Pressed') ||
+              (configuration === 'Label & icon' && state === 'Focused') ||
+              (configuration === 'Label only' && state === 'Focused') ||
+              (configuration === 'Label & icon' && state === 'Hovered') ||
+              (configuration === 'Label only' && state === 'Hovered') ||
+              (configuration === 'Label & icon' && state === 'Enabled') ||
+              (configuration === 'Label only' && state === 'Enabled')),
+        }"
+        >{{ labelText }}</span
+      >
+      <app-check
+        *ngIf="
+          selected === 'True' &&
+          (state === 'Pressed' ||
+            state === 'Focused' ||
+            state === 'Hovered' ||
+            state === 'Enabled')
+        "
+        class=""
+        [ngClass]="{
+          check_statePressedStateFocusedStateHoveredStateEnabled:
+            state === 'Pressed' ||
+            state === 'Focused' ||
+            state === 'Hovered' ||
+            state === 'Enabled',
+        }"
+      ></app-check>
+    </div>
+  </div>
+</div>
