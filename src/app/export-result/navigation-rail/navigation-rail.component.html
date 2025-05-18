@@ -1,75 +1,55 @@
-<div
-  class="root"
-  [ngClass]="{
-    root_alignmentTopAlignmentBottom:
-      alignment === 'Top' || alignment === 'Bottom',
-    root_alignmentMiddle: alignment === 'Middle',
-    root_alignmentTopAlignmentMiddle:
-      alignment === 'Top' || alignment === 'Middle',
-    root_alignmentBottom: alignment === 'Bottom',
-  }"
->
+<div class="root">
+  <div class="arrow-button">
+        <mat-icon
+        *ngIf = "!isVisible"
+        [ngClass]="{ 'hidden': isVisible }"
+        (click)="toggleVisibility()"
+        >chevron_right</mat-icon>
+  </div>
+   <div class="container" 
+   *ngIf = "isVisible"    
+   [ngClass]="{
+      root_alignmentTopAlignmentBottom: alignment === 'Top' || alignment === 'Bottom',
+        root_alignmentMiddle: alignment === 'Middle',
+          root_alignmentTopAlignmentMiddle: alignment === 'Top' || alignment === 'Middle',
+            root_alignmentBottom: alignment === 'Bottom'
+          }"> 
   <div class="menuFab">
-    <div class="menu">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
+    <div class="navItem">
+      <div class="stateLayer">
+        <mat-icon
+        (click)="toggleVisibility()"
+        [ngClass]="{ 'hidden': !isVisible }"
+        >menu</mat-icon>
       </div>
     </div>
-    <div class="fabElevationOverride">
+    <!-- Fab Button -->
+    <div class="fabElevationOverride" *ngIf="fab">
       <div class="fab">
-        <div class="stateLayer">
-          <ng-content></ng-content>
+        <div class="navItem">  
+          <mat-icon>add</mat-icon>
         </div>
       </div>
     </div>
   </div>
-  <div
-    class="destinations"
-    [ngClass]="{
-      destinations_alignmentTopAlignmentBottom:
-        alignment === 'Top' || alignment === 'Bottom',
-      destinations_alignmentMiddle: alignment === 'Middle',
-    }"
-  >
-    <div class="navItem1">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
+
+    <div class="destinations" [ngClass]="{
+      destinations_alignmentTopAlignmentBottom: alignment === 'Top' || alignment === 'Bottom',
+      destinations_alignmentMiddle: alignment === 'Middle'
+    }">     
+      <div 
+        *ngFor="let item of navItems"
+        class="navItem"
+        [class.active]="item.active"
+        (click)="handleItemClick(item)"
+      >
+        <div class="container">
+          <div class="stateLayer">
+            <mat-icon>{{item.icon}}</mat-icon>
+          </div>
         </div>
+        <span class="label">{{item.label}}</span>
       </div>
-      <span class="label">{{ labelText }}</span>
-    </div>
-    <div class="navItem2">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
-      </div>
-      <span class="label">{{ labelText }}</span>
-    </div>
-    <div class="navItem3">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
-      </div>
-      <span class="label">{{ labelText }}</span>
-    </div>
-    <div
-      class="navItem4"
-      [ngClass]="{
-        navItem4_alignmentMiddleAlignmentBottom:
-          alignment === 'Middle' || alignment === 'Bottom',
-      }"
-    >
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
-      </div>
-      <span class="label">{{ labelText }}</span>
     </div>
   </div>
 </div>

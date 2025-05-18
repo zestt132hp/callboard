@@ -464,10 +464,12 @@
   display: flex;
   box-sizing: content-box;
   color: #000000;
-  font-family: Roboto;
+  font-family: sans-serif;
   letter-spacing: 0px;
   text-decoration: none;
   font-weight: 400;
   text-align: left;
   text-wrap: nowrap;
 }
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');

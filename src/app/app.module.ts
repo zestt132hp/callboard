@@ -35,6 +35,7 @@ import { ArrowBackComponent } from "./export-result/arrow-back/arrow-back.compon
 import { AttachFileComponent } from "./export-result/attach-file/attach-file.component";
 import { MoreVertComponent } from "./export-result/more-vert/more-vert.component";
 import { CheckComponent } from "./export-result/check/check.component";
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,6 +76,7 @@ import { CheckComponent } from "./export-result/check/check.component";
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([]),
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
