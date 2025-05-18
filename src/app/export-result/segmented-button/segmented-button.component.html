@@ -1,69 +1,19 @@
-<div
-  class="root"
-  [ngClass]="{
-    root_density3: density === '-3',
-    root_density2: density === '-2',
-    root_density1: density === '-1',
-    root_density0: density === '0',
-    root_segments2: segments === '2',
-    root_segments3: segments === '3',
-    root_segments4: segments === '4',
-    root_segments5: segments === '5',
-  }"
->
-  <div
-    class="segmentStart"
-    [ngClass]="{
-      segmentStart_density3: density === '-3',
-      segmentStart_density2: density === '-2',
-      segmentStart_density1: density === '-1',
-      segmentStart_density0: density === '0',
-    }"
-  >
-    <div class="container">
-      <div class="stateLayer">
-        <app-check class="check"></app-check>
-        <span class="labelText">{{ labelText }}</span>
-      </div>
-    </div>
-  </div>
-  <div
-    *ngIf="segments === '5' || segments === '4' || segments === '3'"
-    class="segment2"
-  >
-    <div class="container">
-      <div class="stateLayer">
-        <span class="labelText">{{ labelText }}</span>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="segments === '5' || segments === '4'" class="segment3">
-    <div class="container">
-      <div class="stateLayer">
-        <span class="labelText">{{ labelText }}</span>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="segments === '5'" class="segment4">
-    <div class="container">
-      <div class="stateLayer">
-        <span class="labelText">{{ labelText }}</span>
-      </div>
-    </div>
-  </div>
-  <div
-    class="segmentEnd"
-    [ngClass]="{
-      segmentEnd_density3: density === '-3',
-      segmentEnd_density2: density === '-2',
-      segmentEnd_density1: density === '-1',
-      segmentEnd_density0: density === '0',
-    }"
-  >
-    <div class="container">
-      <div class="stateLayer">
-        <span class="labelText">{{ labelText }}</span>
-      </div>
-    </div>
-  </div>
+<div class="segmented-container">
+  <button class="stateLayer" 
+          [class.active]="isListView"
+          (click)="toggleView('list')">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+    </svg>
+    Список
+  </button>
+
+  <button class="stateLayer"
+          [class.active]="!isListView"
+          (click)="toggleView('grid')">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/>
+    </svg>
+    Плитка
+  </button>
 </div>

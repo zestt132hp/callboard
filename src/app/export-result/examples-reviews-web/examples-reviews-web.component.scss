@@ -5,8 +5,8 @@
   border-radius: 18px;
   border: 8px solid #cac4d0;
   background: #fef7ff;
-  width: 100vw; // Занимает всю ширину экрана
-  height: 100vh; // Занимает всю высоту экрана
+  width: 99vw; // Занимает всю ширину экрана
+  height: 98vh; // Занимает всю высоту экрана
   margin: 0;
   padding: 0;
   display: flex;
@@ -303,18 +303,6 @@
   display: flex;
 }
 
-.segmented-button-block_1001-2681 {
-  padding: 8px 16px 8px 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: 0px;
-  box-sizing: border-box;
-  height: 36px;
-  width: -webkit-fill-available;
-}
 .segmented-button_1001-2682 {
   width: 253px;
   height: 48px;
@@ -835,4 +823,18 @@
 
 .divider_1001-2746 {
   width: -webkit-fill-available;
+}
+
+.view-switcher {
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    bottom: 16px;
+    right: 16px;
+  }
 }

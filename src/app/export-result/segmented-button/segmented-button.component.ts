@@ -1,13 +1,16 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import { Component, Output, Input, EventEmitter } from "@angular/core";
+
 @Component({
-  selector: "app-segmented-button",
-  templateUrl: "./segmented-button.component.html",
-  styleUrls: ["./segmented-button.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-segmented-button',
+  templateUrl: './segmented-button.component.html',
+  styleUrls: ['./segmented-button.component.scss']
 })
 export class SegmentedButtonComponent {
-  @Input() segments: "2" | "3" | "4" | "5" = "5";
-  @Input() density: "0" | "-1" | "-2" | "-3" = "-3";
+  isListView = true;
+  @Output() viewChanged = new EventEmitter<'list' | 'grid'>();
 
-  labelText = "Default label 2"
+  toggleView(viewType: 'list' | 'grid') {
+    this.isListView = viewType === 'list';
+    this.viewChanged.emit(viewType);
+  }
 }

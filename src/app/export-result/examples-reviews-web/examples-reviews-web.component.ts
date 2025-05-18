@@ -1,14 +1,25 @@
 import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import { SegmentedButtonComponent } from "src/app/export-result/segmented-button/segmented-button.component"
+
 @Component({
   selector: "app-examples-reviews-web",
   templateUrl: "./examples-reviews-web.component.html",
   styleUrls: ["./examples-reviews-web.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+  
 export class ExamplesReviewsWebComponent {
 
   ExamplesReviewsWebComponent() {
     this.setInfiniteScroll();
+  }
+
+  public onViewChanged(viewType: 'list' | 'grid') {
+    console.log('Changed view to:', viewType);
+    // Здесь добавьте логику изменения отображения
+    // Например:
+    // this.isListView = viewType === 'list';
+    // this.updateView();
   }
 
   private setInfiniteScroll() {
