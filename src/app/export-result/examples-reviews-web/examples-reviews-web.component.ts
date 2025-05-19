@@ -9,10 +9,36 @@ import { SegmentedButtonComponent } from "src/app/export-result/segmented-button
 })
   
 export class ExamplesReviewsWebComponent {
-
+  
   ExamplesReviewsWebComponent() {
     this.setInfiniteScroll();
   }
+
+  carouselImages = [
+    'https://pibig.info/uploads/posts/2022-11/1668902380_1-pibig-info-p-derevyannie-polki-na-stenu-vkontakte-1.jpg',
+    'https://cs1.livemaster.ru/storage/5c/4a/86f454c528300327febbbfdcd31v--dlya-doma-i-interera-polka-so-skrytym-krepleniem-iz-dereva-du.jpg',
+    'https://1poderevu.ru/wp-content/uploads/2014/10/polka.jpg'
+  ];
+
+  products = [
+    {
+      images: ['thumb1.jpg', 'thumb2.jpg'],
+      title: 'Продам стол',
+      category: 'Мебель • 1 руб. • 1.2 км',
+      description: 'Самый прочный и простой стол'
+    },
+    {
+      images: ['thumb1.jpg', 'thumb2.jpg'],
+      title: 'Продам стул',
+      category: 'Мебель • 1 руб. • 1.2 км',
+      description: 'Самый прочный и простой стул'
+    },
+    {
+      images: ['thumb1.jpg', 'thumb2.jpg'],
+      title: 'Продам тумбу',
+      category: 'Мебель • 1 руб. • 1.2 км',
+      description: 'Самую прочную и простую стул'
+    }];
 
   public onViewChanged(viewType: 'list' | 'grid') {
     console.log('Changed view to:', viewType);

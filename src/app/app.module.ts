@@ -68,7 +68,7 @@ import { MatIconModule } from '@angular/material/icon';
     ArrowBackComponent,
     AttachFileComponent,
     MoreVertComponent,
-    CheckComponent,
+    CheckComponent
   ],
   imports: [
     BrowserModule,

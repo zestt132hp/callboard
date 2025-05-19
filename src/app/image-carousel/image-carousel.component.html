@@ -1,0 +1,14 @@
+<div class="carousel-container">
+    <div class="carousel-slide" *ngFor="let image of images; let i = index" [class.active]="i === activeIndex">
+      <img [src]="image" alt="Product image">
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="add-to-cart" (click)="addToCart()">
+        <span>Добавить в корзину</span>
+      </button>
+      <div class="distance-badge">
+        <span>12 минут от Вас</span>
+      </div>
+    </div>
+  </div>

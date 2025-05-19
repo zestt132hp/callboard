@@ -1,0 +1,17 @@
+<div class="product-item">
+    <div class="mini-carousel">
+      <div class="mini-slide" *ngFor="let image of images; let i = index" 
+           [class.active]="i === activeMiniIndex">
+        <img [src]="image" alt="Product thumbnail">
+      </div>
+    </div>
+    
+    <div class="product-info">
+      <h3>{{ title }}</h3>
+      <div class="reviews">
+        <!-- Ваши звезды рейтинга -->
+      </div>
+      <p class="category">{{ category }}</p>
+      <p class="description">{{ description }}</p>
+    </div>
+  </div>
