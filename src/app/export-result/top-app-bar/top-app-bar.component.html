@@ -1,101 +1,39 @@
-<div
-  class="root"
-  [ngClass]="{
-    root_configurationSmallCenteredConfigurationSmall:
-      configuration === 'Small centered' || configuration === 'Small',
-    root_configurationMediumConfigurationLarge:
-      configuration === 'Medium' || configuration === 'Large',
-    root_elevationFlat: elevation === 'flat',
-    root_elevationOnScroll: elevation === 'on-scroll',
-    root_configurationMedium: configuration === 'Medium',
-    root_configurationLarge: configuration === 'Large',
-  }"
->
-  <div
-    *ngIf="configuration === 'Small centered' || configuration === 'Small'"
-    class="leadingIcon"
-  >
-    <div class="container">
-      <div class="stateLayer">
-        <ng-content></ng-content>
-        <ng-content></ng-content>
-      </div>
+<div class="root">
+  <div class="nav-menu">
+    <!-- Ссылка на главную -->
+    <a routerLink="/" class="nav-item home-link">
+      <mat-icon>home</mat-icon>
+    </a>
+
+    <!-- Поле поиска -->
+    <div class="search-container">
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery"
+        (input)="onSearchChange(searchQuery)"
+        placeholder="Поиск..."
+        class="search-input"
+      >
     </div>
-  </div>
-  <span
-    *ngIf="configuration === 'Small centered' || configuration === 'Small'"
-    class="headline headline_1 headline_2"
-    >{{ headline }}</span
-  >
-  <div class="trailingIcon">
-    <div class="container">
-      <div class="stateLayer">
-        <ng-content></ng-content>
-      </div>
+
+    <!-- Правая группа -->
+    <div class="right-group">
+      <!-- Избранное -->
+      <button class="nav-item favorites" (click)="favoritesClicked.emit()">
+        <mat-icon>star</mat-icon>
+      </button>
+
+      <!-- Корзина -->
+      <button class="nav-item cart" (click)="cartClicked.emit()">
+        <mat-icon>shopping_cart</mat-icon>      
+        <span class="badge">3</span>
+      </button>
+
+      <!-- Личный кабинет -->
+      <button class="nav-item account">      
+        <mat-icon class="icon">account_circle</mat-icon>
+        <span class="label">Профиль</span>
+      </button>
     </div>
-  </div>
-  <div class="trailingIcon">
-    <div class="trailingIcon1">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
-      </div>
-    </div>
-    <div class="trailingIcon2">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
-      </div>
-    </div>
-    <div class="trailingIcon3">
-      <div class="container">
-        <div class="stateLayer">
-          <ng-content></ng-content>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    *ngIf="configuration === 'Medium' || configuration === 'Large'"
-    class="leadingTrailingIcons"
-  >
-    <div class="leadingIcon">
-      <div class="container">
-        <div class="stateLayer">
-          <mat-icon>home</mat-icon>
-        </div>
-      </div>
-    </div>
-    <div class="trailingIcon">
-      <div class="trailingIcon1">
-        <div class="container">
-          <div class="stateLayer">
-            <ng-content></ng-content>
-          </div>
-        </div>
-      </div>
-      <div class="trailingIcon2">
-        <div class="container">
-          <div class="stateLayer">
-            <ng-content></ng-content>
-          </div>
-        </div>
-      </div>
-      <div class="trailingIcon3">
-        <div class="container">
-          <div class="stateLayer">
-            <ng-content></ng-content>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    *ngIf="configuration === 'Medium' || configuration === 'Large'"
-    class="headline"
-  >
-    <span class="headline">{{ headline }}</span>
   </div>
 </div>
