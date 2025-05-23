@@ -6,6 +6,8 @@ import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 import { ExamplesReviewsWebComponent } from "./export-result/examples-reviews-web/examples-reviews-web.component";
+import { ProductItemComponent } from "./product-item/product-item.component";
+import { ImageCarouselComponent } from "./image-carousel/image-carousel.component";
 import { NavigationRailComponent } from "./export-result/navigation-rail/navigation-rail.component";
 import { TopAppBarComponent } from "./export-result/top-app-bar/top-app-bar.component";
 import { StyleElevatedConfigurationLabelBrandIconStateDisabledComponent } from "./export-result/style-elevated-configuration-label-brand-icon-state-disabled/style-elevated-configuration-label-brand-icon-state-disabled.component";
@@ -40,6 +42,8 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     AppComponent,
     ExamplesReviewsWebComponent,
+    ProductItemComponent,
+    ImageCarouselComponent,
     NavigationRailComponent,
     TopAppBarComponent,
     StyleElevatedConfigurationLabelBrandIconStateDisabledComponent,

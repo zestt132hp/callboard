@@ -1,5 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 import { SegmentedButtonComponent } from "src/app/export-result/segmented-button/segmented-button.component"
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ImageCarouselComponent } from 'src/app/image-carousel/image-carousel.component';
+import { ProductItemComponent } from 'src/app/product-item/product-item.component';
 
 @Component({
   selector: "app-examples-reviews-web",
@@ -30,7 +34,7 @@ export class ExamplesReviewsWebComponent {
     {
       images: ['thumb1.jpg', 'thumb2.jpg'],
       title: 'Продам стул',
-      category: 'Мебель • 1 руб. • 1.2 км',
+      category: 'Мебель • 1 руб. • 1.2 км', 
       description: 'Самый прочный и простой стул'
     },
     {
